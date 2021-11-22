@@ -9,9 +9,9 @@ for i in $(seq 20); do
       (
         ulimit -t 60
         ulimit -v 2000000
-        ./fast-downward-solution/fast-downward.py castle/castle-8-5-$i-cards.pddl --search "astar(pdb(pattern=greedy($k)))" | grep "Greedy generator pattern\|Expanded until last jump\|Total time\|Search time" | sed -e "s/\[.*\] //g"
+        ./fast-downward/fast-downward.py castle/castle-8-5-$i-cards.pddl --search "astar(pdb(pattern=greedy($k)))" | grep "Greedy generator pattern\|Expanded until last jump\|Total time\|Search time" | sed -e "s/\[.*\] //g"
       )
-      echo 
+      echo
     done
   fi
 done
