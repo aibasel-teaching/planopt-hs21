@@ -18,7 +18,7 @@ def get_initial_values(inst):
 
 
 """
-Compute the Q-value for state s and action under the given values.
+Compute the Q-value for state s and action under the given state-values.
 """
 def compute_q_value(inst, s, action, values):
     # TODO: add your code here.
@@ -27,8 +27,8 @@ def compute_q_value(inst, s, action, values):
 
 
 """
-Compute the greedy action in state s under the given values (None if s
-is a goal state) and also return the resulting Q-value of that best
+Compute the greedy action in state s under the given state-values (None
+if s is a goal state) and also return the resulting Q-value of that best
 action in s.
 """
 def compute_greedy_action_and_q_value(inst, s, values):
@@ -87,7 +87,9 @@ def asynchronous_value_iteration(inst, num_iterations):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--num-iterations', type=int, help="number of iterations that asynchronous value iteration should run", default=30),
+    parser.add_argument(
+        '--num-iterations', type=int,
+        help="number of iterations that asynchronous value iteration should run", default=300)
     args = parser.parse_args()
 
     inst = instance.get_example_instance()
