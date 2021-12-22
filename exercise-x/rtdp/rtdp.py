@@ -80,7 +80,7 @@ a goal state.
 """
 def perform_trial(inst, values):
     # TODO: add your code here.
-    # Make use of compute_greedy_action_and_value and sample_successor
+    # Make use of compute_greedy_action_and_q_value and sample_successor
     # Return updated value function values.
 
 
@@ -133,7 +133,7 @@ check_solved on the originally given state s.
 """
 def visit(inst, s, solved, values, epsilon):
     # TODO: add your code here.
-    # Make use of compute_greedy_action_and_value, sample_successor, and
+    # Make use of compute_greedy_action_and_q_value, sample_successor, and
     # check_solved.
     # Return updated labeling solved and updated value function values.
 
