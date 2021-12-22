@@ -180,7 +180,7 @@ if __name__ == "__main__":
         help="number of iterations that RTDP should run at most", default=30)
     parser.add_argument(
         '--epsilon', type=float,
-        help="epsilon value for convergence of LRTDP", default=0.0001)
+        help="epsilon value for check_solved of LRTDP", default=0.0001)
     args = parser.parse_args()
 
     inst = instance.get_example_instance()

@@ -73,7 +73,7 @@ def sample_successor(inst, s, best_a):
         # There are two successors and we know that the first one is the same
         # state as the current one. We can therefore, with probability of
         # transitioning to the second state, sample this second state, and
-        # otherewise just return the previous state.
+        # otherwise just return the previous state.
         succ, prob = succs[1]
         if random.random() <= prob:
             return succ
@@ -235,7 +235,7 @@ if __name__ == "__main__":
         help="number of iterations that RTDP should run at most", default=30)
     parser.add_argument(
         '--epsilon', type=float,
-        help="epsilon value for convergence of LRTDP", default=0.0001)
+        help="epsilon value for check_solved of LRTDP", default=0.0001)
     args = parser.parse_args()
 
     inst = instance.get_example_instance()
